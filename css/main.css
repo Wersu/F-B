@@ -96,7 +96,7 @@ legend {
   --black: #0B1919;
   --font-main: "Open Sans", sans-serif;
   --font-title: "Cormorant", serif;
-  --bg-color: #1D2F30;
+  --bg-color: #1d2f30;
   --ui-click: #688B05;
   --ui-hover: #BAE249;
   --ui-disable: #899D9D;
@@ -274,7 +274,7 @@ body {
   background-color: var(--bg-color);
 }
 .container {
-  max-width: 1110px;
+  width: 1110px;
   margin: 0 auto;
 }
 .nav {
@@ -312,4 +312,42 @@ body {
 }
 .log-in {
   padding: 10px;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../../img/bg/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-title {
+  font-family: var(--font-title);
+  font-size: 60px;
+  line-height: 100%;
+  font-weight: bold;
+  margin-bottom: 16px;
+  max-width: 688px;
+}
+.hero-text {
+  max-width: 635px;
+  margin-bottom: 19px;
+}
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  column-gap: 8px;
+}
+.link-text {
+  color: var(--accent);
+  font-weight: bold;
+  align-self: center;
+}
+.link-icon {
+  align-self: center;
 }
