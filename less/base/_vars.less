@@ -1,0 +1,23 @@
+:root {
+    --text-color: #FFFFFF;
+    --accent: #BAE249;
+    --text-muted: #899D9D;
+    --green: #506829;
+    --black: #0B1919;
+
+    --font-main: "Open Sans", sans-serif;
+    --font-title: "Cormorant", serif;
+
+    --bg-color: #1D2F30;
+
+    --ui-click: #688B05;
+    --ui-hover:#BAE249;
+    --ui-disable: #899D9D;
+
+}
+
+.retina-bg (@image) {
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+            background-image: url(@image);}
+}
