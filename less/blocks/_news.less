@@ -1,0 +1,140 @@
+.news {
+    padding: 60px 0;
+}
+
+.news-title {
+    font-family: var(--font-title);
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 100%;
+    margin-bottom: 30px;
+}
+
+.news-row {
+    display: grid;
+    grid-template-columns: 1fr 255px;
+    column-gap: 30px;
+}
+
+.news-samples {
+    background-color: var(--black);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    justify-content: space-between;
+    row-gap: 18px;
+}
+
+
+.img-number{
+    position: relative;
+}
+.img-number::after {
+    color: var(--text-muted);
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    border: solid 1px var(--text-muted);
+    border-radius: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+
+    content: attr(data-number);
+}
+
+.number-polypody{
+    position: relative;
+    left: -37px;
+}
+
+.number-moss-small::after{
+    bottom: 0;
+}
+.number-moss::after {
+    top: 0;
+    right: -13px;
+}
+.number-stick::after {
+    top: 34px;
+    left: 130px;
+}
+.number-flower::after {
+    top: 187px;
+    left: 50%;
+}
+.number-polypody::after {
+    bottom: 0;
+    right: 20px;
+}
+.number-bark::after {
+    top: 0;
+    right: -8px;
+}
+.number-flower-closed::after {
+    bottom: 0;
+    left: 54px;
+}
+
+.news-samples-img--moss-small {
+    width: 100px;
+    height: 115px;
+}
+.news-samples-img--moss {
+    width: 170px;
+    height: 150px;
+}
+.news-samples-img--stick {
+    width: 423px;
+    height: 150px;
+}
+
+.news-samples-img--flower {
+    width: 306px;
+    height: 293px;
+}
+.news-samples-img--polypody {
+    width: 153px;
+    height: 293px;
+    
+}
+.news-samples-img--bark {
+    width: 157px;
+    height: 293px;
+}
+.news-samples-img--flower-closed {
+    width: 119px;
+    height: 293px;
+}
+
+.news-side {
+    background-color: var(--accent);
+    padding: 16px;
+    position: relative;
+}
+
+.news-side__title {
+    color: var(--bg-color);
+    font-family: var(--font-title);
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.news-side__text {
+    color: var(--green);
+}
+
+.news .learn-more-link {
+    position: absolute;
+    bottom: 24px;
+}
+
+.link__text {
+    color: var(--black);
+}
