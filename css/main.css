@@ -475,3 +475,49 @@ body {
 .link__text {
   color: var(--black);
 }
+.help-us {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../../img/bg/help-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.help-us-title {
+  font-family: var(--font-title);
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.help-us-text {
+  max-width: 825px;
+  margin-bottom: 24px;
+  line-height: 150%;
+  font-weight: 400;
+}
+.help-us-form {
+  max-width: 350px;
+  height: 183px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-name,
+.input-email {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.input-button {
+  align-self: start;
+  padding: 11.5px 26px;
+  background-color: var(--accent);
+  font-weight: bold;
+  color: var(--black);
+}
