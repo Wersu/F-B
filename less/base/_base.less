@@ -12,3 +12,13 @@ html, body {
     
 }
 
+a:focus,
+button:focus, 
+input:focus  {
+    outline: solid 1px var(--ui-focus);
+}
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+    outline: none;
+  }

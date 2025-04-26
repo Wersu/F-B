@@ -99,7 +99,9 @@ legend {
   --bg-color: #1d2f30;
   --ui-click: #688B05;
   --ui-hover: #BAE249;
+  --ui-hover2: #91AC46;
   --ui-disable: #899D9D;
+  --ui-focus: #83A440;
 }
 @font-face {
   font-family: 'Cormorant';
@@ -277,18 +279,15 @@ body {
   width: 1110px;
   margin: 0 auto;
 }
-.learn-more-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 5px;
-  column-gap: 8px;
+a:focus,
+button:focus,
+input:focus {
+  outline: solid 1px var(--ui-focus);
 }
-.link__text {
-  font-weight: bold;
-  align-self: center;
-}
-.link__icon {
-  align-self: center;
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+  outline: none;
 }
 .nav {
   display: flex;
@@ -303,6 +302,9 @@ body {
 .header-logo-link {
   padding: 10px;
 }
+.header-logo-link:focus {
+  outline: none;
+}
 .header-logo-img {
   width: 65px;
   height: 20px;
@@ -314,17 +316,31 @@ body {
 }
 .nav-menu__link {
   padding: 10px;
+  transition: color 0.3s ease;
+}
+.nav-menu__link:hover {
+  color: var(--ui-hover);
+}
+.nav-menu__link:active {
+  color: var(--ui-click);
 }
 .header-buttons {
   display: flex;
   column-gap: min(44px, 8vw);
   align-items: center;
 }
-.search {
+.search,
+.log-in {
+  color: var(--accent);
   padding: 10px;
 }
-.log-in {
-  padding: 10px;
+.search:hover,
+.log-in:hover {
+  color: var(--ui-hover2);
+}
+.search:active,
+.log-in:active {
+  color: var(--ui-click);
 }
 .hero {
   position: relative;
@@ -350,8 +366,11 @@ body {
   max-width: 635px;
   margin-bottom: 19px;
 }
-.hero .link__text {
+.hero .learn-more-link {
   color: var(--accent);
+}
+.hero .learn-more-link:hover {
+  color: var(--ui-hover2);
 }
 .news {
   padding: 60px 0;
@@ -471,9 +490,10 @@ body {
 .news .learn-more-link {
   position: absolute;
   bottom: 24px;
-}
-.link__text {
   color: var(--black);
+}
+.news .learn-more-link:hover {
+  color: var(--green);
 }
 .help-us {
   position: relative;
@@ -514,12 +534,36 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
+.input-name:hover,
+.input-email:hover {
+  background-color: var(--text-muted);
+}
+.input-name:hover::placeholder,
+.input-email:hover::placeholder {
+  color: var(--text-color);
+}
+.input-name:not(:placeholder-shown),
+.input-email:not(:placeholder-shown) {
+  background-color: var(--text-muted);
+  outline: none;
+}
+.input-name:not(:focus):not(:hover):not(:placeholder-shown),
+.input-email:not(:focus):not(:hover):not(:placeholder-shown) {
+  background-color: white;
+}
 .input-button {
   align-self: start;
   padding: 11.5px 26px;
   background-color: var(--accent);
   font-weight: bold;
   color: var(--black);
+  transition: background-color 0.3s ease;
+}
+.input-button:hover {
+  background-color: var(--ui-hover2);
+}
+.input-button:active {
+  background-color: var(--ui-click);
 }
 .social-list {
   background-color: var(--black);
@@ -533,8 +577,13 @@ body {
   padding: 5px;
 }
 .social-list__img {
-  width: var(24px);
-  height: var(24px);
+  color: var(--text-muted);
+}
+.social-list__img:hover {
+  color: var(--ui-hover);
+}
+.social-list__img:active {
+  color: var(--ui-click);
 }
 .copyright {
   display: flex;
@@ -543,4 +592,21 @@ body {
   font-size: 12px;
   color: var(--text-muted);
   padding: 3px 0;
+}
+.learn-more-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  column-gap: 8px;
+}
+.learn-more-link .link__text {
+  font-weight: bold;
+  align-self: center;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+.link__icon {
+  align-self: center;
+  color: inherit;
+  transition: color 0.3s ease;
 }

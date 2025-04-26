@@ -34,12 +34,34 @@
     justify-content: space-between;
 
 }
+
+
 .input-name,
 .input-email {
     width: 100%;
     padding: 10px; 
     box-sizing: border-box; 
 }
+.input-name:hover,
+.input-email:hover {
+    background-color: var(--text-muted);
+
+}
+.input-name:hover::placeholder,
+.input-email:hover::placeholder {
+    color: var(--text-color);
+}
+.input-name:not(:placeholder-shown),
+.input-email:not(:placeholder-shown) {
+    background-color: var(--text-muted);
+    outline: none;
+}
+.input-name:not(:focus):not(:hover):not(:placeholder-shown),
+.input-email:not(:focus):not(:hover):not(:placeholder-shown) {
+  background-color: white;
+}
+
+
 
 .input-button{
     align-self: start;
@@ -47,4 +69,12 @@
     background-color: var(--accent);
     font-weight: bold;
     color: var(--black);
+    transition: background-color 0.3s ease;
+}
+.input-button:hover{
+    background-color: var(--ui-hover2);
+}
+
+.input-button:active{
+    background-color: var(--ui-click);
 }

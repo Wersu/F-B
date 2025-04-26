@@ -1,8 +1,5 @@
-@img-size: 24px;
 
-.footer {
-    
-}
+
 .social-list {
     background-color: var(--black);
     display: flex;
@@ -13,10 +10,17 @@
 }
 .social-list__link {
     padding: 5px;
+    
 }
+
 .social-list__img {
-    width: var(@img-size);
-    height: var(@img-size);
+    color: var(--text-muted);
+}
+.social-list__img:hover {
+    color: var(--ui-hover);
+}
+.social-list__img:active {
+    color: var(--ui-click);
 }
 .copyright{
     display: flex;
