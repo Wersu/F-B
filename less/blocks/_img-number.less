@@ -1,0 +1,52 @@
+.img-number{
+    position: relative;
+}
+.img-number::after {
+    color: var(--text-muted);
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    border: solid 1px var(--text-muted);
+    border-radius: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+
+    content: attr(data-number);
+}
+
+.number-polypody{
+    position: relative;
+    left: -37px;
+}
+.number-moss-small::after{
+    bottom: 0;
+}
+.number-moss::after {
+    top: 0;
+    right: -13px;
+}
+.number-stick::after {
+    top: 34px;
+    left: 130px;
+}
+.number-flower::after {
+    top: 187px;
+    left: 50%;
+}
+.number-polypody::after {
+    bottom: 0;
+    right: 20px;
+}
+.number-bark::after {
+    top: 0;
+    right: -8px;
+}
+.number-flower-closed::after {
+    bottom: 0;
+    left: 54px;
+}

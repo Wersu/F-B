@@ -12,7 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-.help-us-title {
+.help-us__title {
     font-family: var(--font-title);
     font-size: 48px;
     line-height: 100%;
@@ -20,61 +20,9 @@
     font-style: italic;
     margin-bottom: 16px;
 }
-.help-us-text {
+.help-us__text {
     max-width: 825px;
     margin-bottom: 24px;
     line-height: 150%;
     font-weight: 400;
-}
-.help-us-form {
-    max-width: 350px;
-    height: 183px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-
-.input-name,
-.input-email {
-    width: 100%;
-    padding: 10px; 
-    box-sizing: border-box; 
-}
-.input-name:hover,
-.input-email:hover {
-    background-color: var(--text-muted);
-
-}
-.input-name:hover::placeholder,
-.input-email:hover::placeholder {
-    color: var(--text-color);
-}
-.input-name:not(:placeholder-shown),
-.input-email:not(:placeholder-shown) {
-    background-color: var(--text-muted);
-    outline: none;
-}
-.input-name:not(:focus):not(:hover):not(:placeholder-shown),
-.input-email:not(:focus):not(:hover):not(:placeholder-shown) {
-  background-color: white;
-}
-
-
-
-.input-button{
-    align-self: start;
-    padding: 11.5px 26px;
-    background-color: var(--accent);
-    font-weight: bold;
-    color: var(--black);
-    transition: background-color 0.3s ease;
-}
-.input-button:hover{
-    background-color: var(--ui-hover2);
-}
-
-.input-button:active{
-    background-color: var(--ui-click);
 }
