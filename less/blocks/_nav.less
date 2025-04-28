@@ -13,10 +13,12 @@
 
 .nav__logo-link {
     padding: @link-padding;
+
+    &:focus {
+        outline: none;
+    }
 }
-.nav__logo-link:focus {
-    outline: none;
-}
+
 .nav__logo-img {
     width: 65px;
     height: 20px;
@@ -30,13 +32,14 @@
 .nav-menu__link {
     padding: @link-padding;
     transition: color 0.3s ease;
-}
-.nav-menu__link:hover {
-    color: var(--ui-hover);
-}
-.nav-menu__link:active {
-    color: var(--ui-click);
-    
+
+    &:hover {
+        color: var(--ui-hover);
+    }
+
+    &:active {
+        color: var(--ui-click);   
+    }
 }
 
 .nav__buttons {
@@ -46,14 +49,14 @@
 }
 .search,
 .log-in {
-    color: var(--accent);
     padding: @link-padding;
-}
-.search:hover,.log-in:hover {
-    color: var(--ui-hover2);
-}
-.search:active,.log-in:active {
-    color: var(--ui-click);
-}
+    color: var(--accent);
 
+    &:hover {
+        color: var(--ui-hover2);
+    }
 
+    &:active {
+        color: var(--ui-click);
+    }
+}

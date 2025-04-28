@@ -1,22 +1,23 @@
 .img-number{
     position: relative;
-}
-.img-number::after {
-    color: var(--text-muted);
-    font-family: var(--font-title);
-    font-weight: bold;
 
-    border: solid 1px var(--text-muted);
-    border-radius: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    position: absolute;
+    &::after {
+        color: var(--text-muted);
+        font-family: var(--font-title);
+        font-weight: bold;
 
-    content: attr(data-number);
+        border: solid 1px var(--text-muted);
+        border-radius: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+
+        content: attr(data-number);
+    }
 }
 
 .number-polypody{

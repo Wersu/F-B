@@ -18,10 +18,9 @@
 .input-email:hover {
     background-color: var(--text-muted);
 
-}
-.input-name:hover::placeholder,
-.input-email:hover::placeholder {
-    color: var(--text-color);
+    &::placeholder{
+        color: var(--text-color);
+    }
 }
 .input-name:not(:placeholder-shown),
 .input-email:not(:placeholder-shown) {
@@ -42,11 +41,11 @@
     font-weight: bold;
     color: var(--black);
     transition: background-color 0.3s ease;
-}
-.input-button:hover{
-    background-color: var(--ui-hover2);
-}
 
-.input-button:active{
-    background-color: var(--ui-click);
+    &:hover{
+        background-color: var(--ui-hover2);
+    }
+    &:active{
+        background-color: var(--ui-click);
+    }
 }

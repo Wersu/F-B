@@ -7,32 +7,30 @@
     background-color: var(--black);
 }
 
+.size(@width, @height){
+    width: @width;
+    height: @height;
+}
+
 .samples__img--moss-small {
-    width: 100px;
-    height: 115px;
+    .size(100px, 115px);
 }
 .samples__img--moss {
-    width: 170px;
-    height: 150px;
+    .size(170px, 150px);
 }
 .samples__img--stick {
-    width: 423px;
-    height: 150px;
+    .size(423px, 150px);
 }
 .samples__img--flower {
-    width: 306px;
-    height: 293px;
+    .size(306px, 293px);
 }
 .samples__img--polypody {
-    width: 153px;
-    height: 293px;
+    .size(153px, 293px);
 }
 .samples__img--bark {
-    width: 157px;
-    height: 293px;
+    .size(157px, 293px);
 }
 .samples__img--flower-closed {
-    width: 119px;
-    height: 293px;
+    .size(119px, 293px);
 }
 
