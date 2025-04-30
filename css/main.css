@@ -373,7 +373,7 @@ input:focus:not(:focus-visible) {
   color: var(--ui-hover2);
 }
 .news {
-  padding: 60px 0;
+  padding-bottom: 60px;
 }
 .news__title {
   font-family: var(--font-title);
@@ -495,6 +495,10 @@ input:focus:not(:focus-visible) {
   bottom: 0;
   left: 54px;
 }
+.number-plant::after {
+  top: -14px;
+  left: 0;
+}
 .help-us {
   width: 100%;
   min-height: 50vh;
@@ -609,4 +613,60 @@ input:focus:not(:focus-visible) {
   align-self: center;
   color: inherit;
   transition: color 0.3s ease;
+}
+.gallery {
+  padding: 60px 0;
+}
+.slider__arrows {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.slider__btn {
+  color: var(--text-muted);
+}
+.slider__btn:hover {
+  color: var(--ui-hover);
+}
+.slider__btn:active {
+  color: var(--ui-click);
+}
+.slider__count {
+  font-family: var(--font-title);
+  font-size: 24px;
+}
+.card {
+  width: 255px;
+  border: solid 1px var(--black);
+}
+.card__photo {
+  background-color: var(--black);
+  padding: 30px 16px;
+  height: 180px;
+}
+.card__desc {
+  padding: 16px;
+  padding-bottom: 24px;
+  height: 313px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card__title {
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 24px;
+}
+.card__text {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.card__btn {
+  margin-top: auto;
+  margin-right: auto;
+  color: var(--accent);
+  padding: 10px 28px;
+  border: solid 1px var(--accent);
 }
