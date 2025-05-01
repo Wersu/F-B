@@ -20,8 +20,8 @@
 
 
 
-.retina-bg (@image) {
+.retina-bg(@image) {
 @media (-webkit-min-device-pixel-ratio: 2), 
        (min-resolution: 192dpi) {
-            background-image: url(@image);}
+            background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url(@image);}
 }
