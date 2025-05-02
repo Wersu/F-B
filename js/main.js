@@ -25,11 +25,11 @@ const swiper = new Swiper('.swiper', {
 });
 
 function updateCounter(swiperInstance) {
-	const counterSpan = document.querySelector('.slider__count span');
-	const totalGroups = Math.ceil(swiperInstance.slides.length / swiperInstance.params.slidesPerGroup / 2); // делим на 2 из-за дублированных слайдов при loop:true
+	const counter = document.querySelector('.slider__count');
+	const totalGroups = Math.ceil(swiperInstance.slides.length / swiperInstance.params.slidesPerGroup);
 
 	let realIndex = swiperInstance.realIndex;
-	let currentGroup = Math.floor(realIndex / swiperInstance.params.slidesPerGroup) + 1;
+	let currentGroup = Math.floor(realIndex / swiperInstance.params.slidesPerGroup);
 
-	counterSpan.textContent = currentGroup;
+	counter.textContent=`${currentGroup + 1} из ${totalGroups}`;
 }
