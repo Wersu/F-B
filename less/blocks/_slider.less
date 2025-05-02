@@ -9,13 +9,24 @@
 
 .slider__btn {
     color: var(--text-muted);
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    transform-origin: center;
+    will-change: transform;
 
     &:hover{
         color: var(--ui-hover);
+        transform: scale(1.2);
     }
 
     &:active{
         color: var(--ui-click);
+        transform: scale(1);
+    }
+
+    svg{
+        vertical-align: middle;
     }
 }
 .slider__count {

@@ -279,6 +279,10 @@ body {
   width: 1110px;
   margin: 0 auto;
 }
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
 a:focus,
 button:focus,
 input:focus {
@@ -377,6 +381,9 @@ input:focus:not(:focus-visible) {
 .hero .learn-more-link:hover {
   color: var(--ui-hover2);
 }
+.hero .learn-more-link:active {
+  color: var(--ui-click);
+}
 .about {
   padding-bottom: 60px;
 }
@@ -400,6 +407,9 @@ input:focus:not(:focus-visible) {
 }
 .about .learn-more-link:hover {
   color: var(--green);
+}
+.about .learn-more-link:active {
+  color: var(--black);
 }
 .samples {
   padding: 16px;
@@ -636,12 +646,22 @@ input:focus:not(:focus-visible) {
 }
 .slider__btn {
   color: var(--text-muted);
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  transform-origin: center;
+  will-change: transform;
 }
 .slider__btn:hover {
   color: var(--ui-hover);
+  transform: scale(1.2);
 }
 .slider__btn:active {
   color: var(--ui-click);
+  transform: scale(1);
+}
+.slider__btn svg {
+  vertical-align: middle;
 }
 .slider__count {
   font-family: var(--font-title);
@@ -679,4 +699,18 @@ input:focus:not(:focus-visible) {
   color: var(--accent);
   padding: 10px 28px;
   border: solid 1px var(--accent);
+}
+.card__btn:hover {
+  background-color: var(--ui-hover);
+  color: var(--black);
+}
+.card__btn:active {
+  background-color: var(--ui-click);
+  color: var(--black);
+  border-color: var(--ui-click);
+}
+.card__btn:disabled {
+  color: var(--ui-disable);
+  border-color: var(--ui-disablet);
+  background: none;
 }

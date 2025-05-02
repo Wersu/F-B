@@ -34,4 +34,21 @@
     color: var(--accent);
     padding: 10px 28px;
     border: solid 1px var(--accent);
+
+    &:hover {
+        background-color: var(--ui-hover);
+        color: var(--black);
+    }
+
+    &:active {
+        background-color: var(--ui-click);
+        color: var(--black);
+        border-color: var(--ui-click);
+    }
+
+    &:disabled {
+        color: var(--ui-disable);
+        border-color: var(--ui-disablet);
+        background: none;
+    }
 }
