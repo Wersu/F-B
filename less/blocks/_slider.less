@@ -1,3 +1,7 @@
+.slider {
+    position: relative;
+}
+
 .slider__arrows {
     margin-top: 26px;
 
@@ -15,23 +19,31 @@
     transform-origin: center;
     will-change: transform;
 
-    &:hover{
+    &:hover {
         color: var(--ui-hover);
         transform: scale(1.2);
     }
 
-    &:active{
+    &:active {
         color: var(--ui-click);
         transform: scale(1);
     }
 
-    svg{
+    svg {
         vertical-align: middle;
     }
 }
+
 .slider__count {
     font-family: var(--font-title);
     font-size: 24px;
 }
 
 
+
+
+@media (max-width: 768px) {
+    .slider__arrows {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+.swiper-pagination {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .swiper-pagination {
+        bottom: -30px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+
+        display: flex;
+        gap: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+        transition: all .3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 10px !important;
+        height: 10px !important;
+        background-color: var(--accent) !important;
+    }
+}

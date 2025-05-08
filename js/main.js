@@ -8,23 +8,49 @@ prevButton.style.display = 'block';
 // Swiper slider
 const swiper = new Swiper('.swiper', {
 	loop: true,
-	// freeMode: true,
 
-	slidesPerView: 4,
-    slidesPerGroup: 4,
+
 	spaceBetween: 30,
-    
 
-	// Navigation arrows
-	navigation: {        
+	navigation: {
 		nextEl: '#sliderNext',
 		prevEl: '#sliderPrev',
 	},
-    on: {
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true,
+	},
+
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+
+		},
+		769: {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+
+		},
+		576: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+
+		},
+		1: {
+			slidesPerView: 1,
+			slidesPerGroup: 1,
+
+		},
+	},
+
+
+	on: {
 		init: function () {
 			updateCounter(this);
 			document.querySelector('#sliderNext').style.display = 'block';
-    		document.querySelector('#sliderPrev').style.display = 'block';
+			document.querySelector('#sliderPrev').style.display = 'block';
 		},
 		slideChange: function () {
 			updateCounter(this);
@@ -39,7 +65,7 @@ function updateCounter(swiperInstance) {
 	let realIndex = swiperInstance.realIndex;
 	let currentGroup = Math.floor(realIndex / swiperInstance.params.slidesPerGroup);
 
-	counter.textContent=`${currentGroup + 1} из ${totalGroups}`;
+	counter.textContent = `${currentGroup + 1} из ${totalGroups}`;
 
 	if (totalGroups <= 1) {
 		nextButton.classList.add('swiper-button-disabled');

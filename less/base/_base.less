@@ -4,13 +4,23 @@ html, body {
     font-family: var(--font-main);
     color: var(--text-color);
     background-color: var(--bg-color);
+    font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
 }
+
+
+/* Grid */
 
 .container {
     width: 1110px;
     margin: 0 auto;
-    
 }
+
+/*
+* {
+    outline: 1px solid red;
+  }*/
 
 .swiper-button-disabled {
     opacity: 0.3;
@@ -27,4 +37,29 @@ a:focus:not(:focus-visible),
 button:focus:not(:focus-visible),
 input:focus:not(:focus-visible) {
     outline: none;
-  }
+}
+
+/* Utility */
+
+.none {
+    display: none !important;
+}
+
+
+@media (max-width: 1140px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 1000px) {
+    html, body {
+        font-size: 14px;
+    }
+}
+/*
+@media (max-width: 730px) {
+    html, body {
+        font-size: 12px;
+    }
+}*/
