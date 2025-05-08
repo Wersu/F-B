@@ -756,17 +756,17 @@ input:focus:not(:focus-visible) {
   position: relative;
 }
 .slider__arrows {
-  margin-top: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 26px;
   gap: 30px;
 }
 .slider__btn {
-  color: var(--text-muted);
-  transition: transform 0.2s;
   display: flex;
   align-items: center;
+  color: var(--text-muted);
+  transition: transform 0.2s;
   transform-origin: center;
   will-change: transform;
 }
@@ -794,15 +794,17 @@ input:focus:not(:focus-visible) {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border: solid 1px var(--black);
+  flex: 1 1 auto;
   width: 255px;
+  border: solid 1px var(--black);
 }
 .card__photo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  flex-shrink: 0;
   height: 180px;
+  padding: 5px;
   background-color: var(--black);
 }
 .card__img {
@@ -813,10 +815,12 @@ input:focus:not(:focus-visible) {
 .card__desc {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+  height: 100%;
   gap: 8px;
   padding: 16px;
   padding-bottom: 24px;
-  height: 313px;
 }
 .card__title {
   font-family: var(--font-title);
@@ -851,13 +855,22 @@ input:focus:not(:focus-visible) {
 .swiper-pagination {
   display: none;
 }
+.swiper-wrapper {
+  display: flex;
+  height: auto;
+}
+.swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
 @media (max-width: 768px) {
   .swiper-pagination {
+    display: flex;
     bottom: -30px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
-    display: flex;
     gap: 20px;
   }
   .swiper-pagination-bullet {
@@ -869,5 +882,19 @@ input:focus:not(:focus-visible) {
     width: 10px !important;
     height: 10px !important;
     background-color: var(--accent) !important;
+  }
+}
+@media (max-width: 500px) {
+  .swiper-pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: -40px !important;
+  }
+  .swiper-pagination-bullets {
+    display: flex;
+    gap: 8px;
+  }
+  .swiper-pagination-bullet {
+    flex: 0 0 auto;
   }
 }
