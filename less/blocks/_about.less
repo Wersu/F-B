@@ -23,7 +23,7 @@
     bottom: 24px;
     color: var(--black);
 
-    &:hover{
+    &:hover {
         color: var(--green);
     }
 
@@ -32,4 +32,23 @@
     }
 }
 
+@media (max-width: 1090px) {
+    .about .learn-more-link {
+        position: static;
+        margin-top: 25px;
+    }
 
+}
+
+@media (max-width: 768px) {
+    .about-row {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 30px;
+    }
+
+    .about .learn-more-link {
+        margin-top: 76px;
+    }
+
+}

@@ -20,9 +20,11 @@
     }
 }
 
+// смещение картинки
 .number-polypody {
     position: relative;
-    left: -37px;
+    //left: -37px;
+    left: -4.5%;
 }
 
 .number-moss-small::after {
@@ -31,35 +33,58 @@
 
 .number-moss::after {
     top: 0;
-    right: -13px;
+    //right: -13px;
+    right: -8%;
 }
 
 .number-stick::after {
-    top: 34px;
-    left: 130px;
+    //top: 34px;
+    //left: 130px;
+    top: 23%;
+    left: 31%;
 }
 
 .number-flower::after {
-    top: 187px;
+    //top: 187px;
+    top: 64%;
     left: 50%;
 }
 
 .number-polypody::after {
     bottom: 0;
-    right: 20px;
+    //right: 20px;
+    right: 13%;
 }
 
 .number-bark::after {
     top: 0;
-    right: -8px;
+    //right: -8px;
+    right: -5%;
 }
 
 .number-flower-closed::after {
     bottom: 0;
-    left: 54px;
+    //left: 54px;
+    left: 45.4%;
 }
+
 
 .number-plant::after {
     top: -14px;
     left: 0;
+}
+
+@media (max-width: 780px) {
+    .number-moss::after {
+        right: -15%;
+    }
+
+    .number-stick::after {
+        top: 15%;
+        left: 20%;
+    }
+
+    .number-polypody::after {
+        right: 0;
+    }
 }
