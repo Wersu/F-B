@@ -731,6 +731,7 @@ input:focus:not(:focus-visible) {
 .help-us {
   width: 100%;
   min-height: 50vh;
+  padding: 60px 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -739,7 +740,6 @@ input:focus:not(:focus-visible) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: none;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .help-us {
@@ -759,6 +759,11 @@ input:focus:not(:focus-visible) {
   line-height: 150%;
   font-weight: 400;
   margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .help-us__text {
+    display: none;
+  }
 }
 .form {
   max-width: 350px;
@@ -794,7 +799,6 @@ input:focus:not(:focus-visible) {
   align-self: start;
   padding: 11.5px 26px;
   background-color: var(--accent);
-  font-weight: bold;
   color: var(--black);
   transition: background-color 0.3s ease;
 }
