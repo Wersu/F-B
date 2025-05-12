@@ -7,6 +7,8 @@
     justify-content: flex-start;
     position: relative;
     
+    padding: 69px 12px 30px;
+
     background-image: 
         linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)),
         url("./../../img/bg/hero-bg.jpg");
@@ -42,24 +44,16 @@
     }
 }
 
-@media (max-width: 880px) {
-    .hero__title {
-        font-size: 56px;
-    }
-}
-
-@media (max-width: 540px) {
+@media (max-width: 768px) {
     .hero__title {
         font-size: 48px;
     }
     .hero__text {
         display: none;
     }
-
     .hero {
-        min-height: 40vh;
+        min-height: 30vh;
     }
-    
 }
 
 @media (max-width: 270px) {

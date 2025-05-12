@@ -425,13 +425,6 @@ input:focus:not(:focus-visible) {
   .nav-menu::-webkit-scrollbar {
     display: none;
   }
-  .nav__logo-img {
-    width: 45px;
-    height: auto;
-  }
-  .nav__buttons svg {
-    width: 15px;
-  }
 }
 .hero {
   width: 100%;
@@ -440,6 +433,7 @@ input:focus:not(:focus-visible) {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  padding: 69px 12px 30px;
   background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../../img/bg/hero-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -471,12 +465,7 @@ input:focus:not(:focus-visible) {
 .hero .learn-more-link:active {
   color: var(--ui-click);
 }
-@media (max-width: 880px) {
-  .hero__title {
-    font-size: 56px;
-  }
-}
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .hero__title {
     font-size: 48px;
   }
@@ -484,7 +473,7 @@ input:focus:not(:focus-visible) {
     display: none;
   }
   .hero {
-    min-height: 40vh;
+    min-height: 30vh;
   }
 }
 @media (max-width: 270px) {
@@ -507,6 +496,7 @@ input:focus:not(:focus-visible) {
   display: grid;
   grid-template-columns: 1fr 255px;
   column-gap: 30px;
+  align-items: stretch;
 }
 .about .learn-more-link {
   position: absolute;
@@ -542,6 +532,14 @@ input:focus:not(:focus-visible) {
   padding: 16px;
   justify-content: space-between;
   background-color: var(--black);
+  align-self: stretch;
+}
+.samples-wrapper {
+  align-self: stretch;
+  /* 2) превращаем wrapper в флекс-контейнер */
+  display: flex;
+  /* 3) центрируем содержимое (ваш .samples) по вертикали */
+  align-items: center;
 }
 .samples__img--moss-small {
   width: 100px;

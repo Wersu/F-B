@@ -5,8 +5,16 @@
     padding: 16px;
     justify-content: space-between;
     background-color: var(--black);
+    align-self: stretch;
 }
 
+.samples-wrapper {
+     align-self: stretch;
+  /* 2) превращаем wrapper в флекс-контейнер */
+  display: flex;
+  /* 3) центрируем содержимое (ваш .samples) по вертикали */
+  align-items: center;
+}
 
 .size(@width, @height) {
     width: @width;
