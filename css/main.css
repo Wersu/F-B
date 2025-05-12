@@ -813,8 +813,8 @@ input:focus:not(:focus-visible) {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 20px;
-  padding: 13px 0;
+  column-gap: 30px;
+  padding: 18px 0;
 }
 .social-list__link {
   padding: 5px;
@@ -835,6 +835,11 @@ input:focus:not(:focus-visible) {
   font-size: 12px;
   color: var(--text-muted);
   padding: 3px 0;
+}
+@media (max-width: 270px) {
+  .social-list {
+    column-gap: 10px;
+  }
 }
 .learn-more-link {
   display: inline-flex;
