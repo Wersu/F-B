@@ -20,7 +20,8 @@ const swiper = new Swiper('.swiper', {
 		el: '.swiper-pagination',
 		type: 'bullets',
 		clickable: true,
-		dynamicBullets: false,
+		dynamicBullets: true,
+		dynamicMainBullets: 2,
 	},
 
 	breakpoints: {
@@ -55,7 +56,7 @@ const swiper = new Swiper('.swiper', {
 		},
 		slideChange: function () {
 			updateCounter(this);
-		}
+		},
 	}
 });
 
@@ -73,4 +74,3 @@ function updateCounter(swiperInstance) {
 		prevButton.classList.add('swiper-button-disabled');
 	}
 }
-
