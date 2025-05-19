@@ -21,7 +21,20 @@
 
 
 .retina-bg(@image) {
-@media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi) {
-            background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url(@image);}
+    @media (-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi) {
+                background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url(@image);}
+}
+
+
+.media-tabled(@rules) {
+    @media (max-width: 768px) {
+        @rules();
+    }
+}
+
+.media-mobile(@rules) {
+    @media (max-width: 270px) {
+        @rules();
+    }
 }
