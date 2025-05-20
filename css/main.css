@@ -419,7 +419,7 @@ input:focus:not(:focus-visible) {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero {
-    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url('../../img/bg/hero-bg@3x.jpg');
+    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/hero-bg.jpg");
   }
 }
 @media (max-width: 768px) {
@@ -713,7 +713,7 @@ input:focus:not(:focus-visible) {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .help-us {
-    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url('../../img/bg/help-bg@3x.jpg');
+    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/help-bg.jpg");
   }
 }
 .help-us__title {
