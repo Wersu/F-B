@@ -412,14 +412,14 @@ input:focus:not(:focus-visible) {
   justify-content: flex-start;
   position: relative;
   padding: 69px 12px 30px;
-  background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../../img/bg/hero-bg.jpg");
+  background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero {
-    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/hero-bg.jpg");
+    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/hero-bg@3x.jpg");
   }
 }
 @media (max-width: 768px) {
@@ -706,14 +706,14 @@ input:focus:not(:focus-visible) {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../../img/bg/help-bg.jpg");
+  background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/help-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .help-us {
-    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/help-bg.jpg");
+    background-image: linear-gradient(rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url("../img/bg/help-bg@3x.jpg");
   }
 }
 .help-us__title {
